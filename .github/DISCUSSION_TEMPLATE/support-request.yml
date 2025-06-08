@@ -1,6 +1,7 @@
 name: "🆘 Support Request"
 description: "Request help or support for Uno Platform 🙋‍♂️🙋‍♀️"
 labels: [kind/support, triage/untriaged]
+discussion_category: Q&A
 body:
   - type: markdown
     attributes:
@@ -21,7 +22,7 @@ body:
     id: support-platforms
     attributes:
       label: "For which platforms 📱💻🖥️"
-      description: "Select the platforms your support requested is related to 🌍"
+      description: "Select the platforms your support request is related to 🌍"
       multiple: true
       options:
         - "All platforms 🌍"
