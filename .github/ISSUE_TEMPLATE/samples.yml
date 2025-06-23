@@ -1,0 +1,68 @@
+name: "🧪 Samples Issue/Request"
+description: "Report an issue with Uno Platform Samples or request sample enhancement 📚"
+labels: [triage/untriaged, difficulty/tbd]
+type: "Samples"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use this template for reporting issues with the samples or requesting sample enhancements. We greatly appreciate it when people send in pull requests with fixes. If any friction, apart from knowledge, is preventing you from doing so, please let us know below. 🙏
+
+  - type: dropdown
+    id: samples-type
+    attributes:
+      label: "Type of request 📋"
+      description: "Are you reporting an issue or requesting an enhancement?"
+      options:
+        - "Issue - Something is wrong with existing samples"
+        - "Request - I need a new sample or enhancement"
+    validations:
+      required: true
+
+  - type: input
+    id: samples-location
+    attributes:
+      label: "Sample location (if applicable) 📄"
+      description: "Specify the sample page or section where you've identified an issue 🔍"
+      placeholder: "ex. Windows.Devices/Accelerometer"
+
+  - type: textarea
+    id: samples-description
+    attributes:
+      label: "What's the issue or what would you like to be added? 💡"
+      description: "For issues: Provide a detailed description of what you believe is incorrect, unclear, or needs improvement. For requests: Provide a clear and detailed explanation of what aspect of our samples you would like to see improved and tell us why you think it is needed 📝"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: samples-renderer
+    attributes:
+      label: "Renderer 🎨"
+      description: "Select the renderer you are using. Your application is using Skia if you find `SkiaRenderer` in your `.csproj` project file."
+      options:
+        - label: "Skia"
+        - label: "Native"
+
+  - type: dropdown
+    id: samples-platforms
+    attributes:
+      label: "For which platforms 📱💻🖥️"
+      description: "Select the platforms for which you want the sample provided or where the issue occurs 🌍"
+      multiple: true
+      options:
+        - "All platforms 🌍"
+        - "WebAssembly"
+        - "Android"
+        - "iOS"
+        - "Desktop (Windows)"
+        - "Desktop (macOS)"
+        - "Desktop (X11)"
+        - "Desktop (Linux Framebuffer)"
+        - "Windows App SDK"
+        - "Build tasks"
+
+  - type: textarea
+    id: samples-additional-info
+    attributes:
+      label: "Any feedback? 💬"
+      description: "Feel free to offer any additional feedback that could help us better understand the problem or potential solution 💡"

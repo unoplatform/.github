@@ -1,22 +1,41 @@
-name: "📖 Documentation Request"
-description: "Request an enhancement to the Uno documentation ✨"
-labels: [kind/consumer-experience, kind/documentation, triage/untriaged, difficulty/tbd]
+name: "📚 Documentation Issue/Request"
+description: "Report an issue with the Uno documentation or request documentation enhancement 📝"
+labels: [triage/untriaged, difficulty/tbd]
+type: "Documentation"
 body:
   - type: markdown
     attributes:
       value: |
-        Please only use this template for submitting documentation requests. 🙏
+        Please use this template for reporting issues with the documentation or requesting documentation enhancements. We greatly appreciate it when people send in pull requests with fixes. If any friction, apart from knowledge, is preventing you from doing so, please let us know below. 🙏
+
+  - type: dropdown
+    id: docs-type
+    attributes:
+      label: "Type of request 📋"
+      description: "Are you reporting an issue or requesting an enhancement?"
+      options:
+        - "Issue - Something is wrong or unclear"
+        - "Request - I need documentation on something"
+    validations:
+      required: true
+
+  - type: input
+    id: docs-location
+    attributes:
+      label: "On which page? (if applicable) 📄"
+      description: "Specify the page or section of the documentation where you've identified an issue 🔍"
+      placeholder: "ex. https://platform.uno/docs/articles/intro.html"
 
   - type: textarea
-    id: docs-request-description
+    id: docs-description
     attributes:
-      label: "What would you like clarification on? 🤔"
-      description: "Provide a clear and detailed explanation of what aspect of the documentation you would like to see improved or clarified 📝"
+      label: "What's the issue or what would you like clarification on? 🤔"
+      description: "Provide a detailed description of what you believe is incorrect, unclear, or needs improvement. For requests, explain what aspect of the documentation you would like to see improved or clarified 📝"
     validations:
       required: true
 
   - type: dropdown
-    id: docs-request-concern
+    id: docs-concern
     attributes:
       label: "Concern 📚"
       description: "Choose the category that best describes your concern from the provided options or leave blank if none is applicable 🏷️"
@@ -31,7 +50,7 @@ body:
         - "Support 🆘"
 
   - type: checkboxes
-    id: docs-request-renderer
+    id: docs-renderer
     attributes:
       label: "Renderer 🎨"
       description: "Select the renderer you are using. Your application is using Skia if you find `SkiaRenderer` in your `.csproj` project file."
@@ -40,7 +59,7 @@ body:
         - label: "Native"
 
   - type: dropdown
-    id: docs-request-platforms
+    id: docs-platforms
     attributes:
       label: "Affected platforms 📱💻🖥️"
       description: "Select the platforms for which the requested documentation is relevant 🌍"
@@ -58,7 +77,7 @@ body:
         - "Build tasks"
 
   - type: textarea
-    id: docs-request-additional-info
+    id: docs-additional-info
     attributes:
       label: "Any feedback? 💬"
       description: "Feel free to offer any additional feedback that could help us better understand the problem or potential solution 💡"
