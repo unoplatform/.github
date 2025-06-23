@@ -6,6 +6,15 @@ body:
     attributes:
       value: |
         Thanks for stopping by to share your feedback! 💖✨
+  - type: dropdown
+    id: feedback-sentiment
+    attributes:
+      label: "Feedback type 👍👎"
+      description: "Is this positive or negative feedback?"
+      options:
+        - "👍 Positive feedback"
+        - "👎 Negative feedback / Issue"
+        - "💡 Suggestion / Mixed feedback"
   - type: textarea
     id: feedback-description
     attributes:
