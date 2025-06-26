@@ -1,0 +1,100 @@
+name: "🐞 Bug Report"
+description: "Report a bug encountered while developing with Uno 🚨"
+labels: [triage/untriaged, difficulty/tbd]
+type: "Bug"
+body:
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: "Current behavior 🐛"
+      description: "Describe how the issue manifests. What went wrong?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "Expected behavior 🎯"
+      description: "Describe what the desired behavior should be. What did you expect?"
+
+  - type: textarea
+    id: how-to-reproduce
+    attributes:
+      label: "How to reproduce it (as minimally and precisely as possible) 🔬"
+      description: |
+              Please provide a **MINIMAL REPRO PROJECT** and the **STEPS TO REPRODUCE** the issue.
+
+              💡 **Knowing what logs/details to include is just as important as the repro itself.** Help us help you by being precise and concise.
+
+              ### 📦 Creating a Minimal Repro Project
+              - Use Uno templates via:
+                - `dotnet new install Uno.Templates` and `dotnet new unoapp`
+                - or the [Uno Visual Studio extension](https://platform.uno/docs/articles/get-started-vs-2022.html)
+              - Add the **least amount of code** needed to show the issue
+              - Keep **all project heads**, even if some platforms don't seem affected
+              - Delete all `bin/` and `obj/` folders
+              - Zip the folder and attach it here
+
+              ### 🌐 For WebAssembly + UI-only issues
+              - Use the Uno [Playground](https://playground.platform.uno)
+              - Add your XAML + DataContext
+              - Paste the generated link here
+
+              ### 🧰 Additional Tips
+              - Not sure what to include? See our [minimal repro guide](https://platform.uno/docs/articles/creating-minimal-repros.html)
+              - Having build issues? Add a [binary log file](https://platform.uno/docs/articles/uno-builds-troubleshooting.html#generating-msbuild-binary-log-files)
+
+              Providing clear, focused information saves everyone's time and gets your issue solved faster! 🚀
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: "Workaround 🛠️"
+      description: "Please provide steps to workaround this problem if possible. Got a hack? Share it! 💡"
+
+  - type: checkboxes
+    id: renderer
+    attributes:
+      label: "Renderer 🎨"
+      description: "Select the renderer you are using. Your application is using Skia if you find `SkiaRenderer` in your `.csproj` project file."
+      options:
+        - label: "Skia"
+        - label: "Native"
+
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: "Affected platforms 📱💻🖥️"
+      description: "Select the platforms for which your issue is relevant 🌍"
+      multiple: true
+      options:
+        - "All platforms 🌍"
+        - "WebAssembly"
+        - "Android"
+        - "iOS"
+        - "Desktop (Windows)"
+        - "Desktop (macOS)"
+        - "Desktop (X11)"
+        - "Desktop (Linux Framebuffer)"
+        - "Windows App SDK"
+        - "Build tasks"
+
+  - type: textarea
+    id: nuget-versions
+    attributes:
+      label: "Uno.Sdk version (and other relevant versions) 📦"
+      description: "Please provide the version of the Uno.Sdk you are using. This can be found in the `global.json` file."
+    validations:
+      required: true
+
+  - type: input
+    id: ide
+    attributes:
+      label: "IDE version 🧑‍💻"
+      description: "Please provide the full name and version of the IDE you are using, e.g. `Visual Studio 2022 17.14.2`."
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Anything else we need to know? 💬"
+      description: "We would love to know of any friction, apart from knowledge, that prevented you from sending in a pull-request"
