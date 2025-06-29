@@ -1,4 +1,6 @@
-# Reporting Security Issues
+# 🛡️ Reporting Security Issues
+
+⚠️ **Please do not report security vulnerabilities through public GitHub issues.**
 
 The Uno team and community take security bugs in Uno seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
