@@ -37,7 +37,7 @@ When you ask me to create a new View or ViewModel, I will:
 **View Development:**
 - Creating XAML layouts using WinUI/UWP controls
 - Implementing responsive designs for different form factors
-- Setting up navigation between pages
+- Setting up navigation between pages using Frame navigation (standard WinUI/UWP pattern)
 - Creating reusable UserControls
 - Implementing platform-specific UI adjustments
 
@@ -61,7 +61,7 @@ When you ask me to create a new View or ViewModel, I will:
 
 ## Best Practices
 
-1. **Use WinUI 3 APIs**: Uno Platform primarily implements WinUI 3 APIs with UWP compatibility, so refer to Microsoft's WinUI documentation
+1. **Use WinUI 3 APIs**: Uno Platform primarily implements WinUI 3 APIs with UWP compatibility. Note that API availability may vary by target platform, so refer to Microsoft's WinUI documentation and Uno Platform docs for platform-specific details
 2. **Test on Multiple Platforms**: Code should work across WebAssembly, iOS, Android, and desktop platforms
 3. **Follow MVVM Pattern**: Keep business logic in ViewModels, UI in Views
 4. **Leverage Uno Extensions**: Consider using Uno.Extensions for MVVM, Navigation, Dependency Injection, Configuration, and Reactive programming
@@ -70,8 +70,8 @@ When you ask me to create a new View or ViewModel, I will:
 ## Uno Platform Renderers
 
 Uno Platform supports two rendering approaches:
-- **Native Renderer**: Uses native platform controls (default)
-- **Skia Renderer**: Uses SkiaSharp for consistent cross-platform rendering
+- **Native Renderer**: Uses native platform controls (default). Best for platform-consistent UI and maximum performance on each platform
+- **Skia Renderer**: Uses SkiaSharp for pixel-perfect cross-platform rendering. Best for custom graphics, complex animations, and when you need identical rendering across all platforms
 
 When providing solutions, I'll consider which renderer you're using if it affects the implementation.
 
