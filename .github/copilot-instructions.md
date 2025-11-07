@@ -4,7 +4,7 @@ Welcome to Uno Platform development! I'm here to help you build cross-platform a
 
 ## About Uno Platform
 
-Uno Platform is a Universal Windows Platform (UWP) bridge that allows you to build cross-platform applications for WebAssembly, iOS, Android, macOS, Linux, and Windows using C# and XAML. It follows the MVVM (Model-View-ViewModel) pattern and WinUI/UWP APIs.
+Uno Platform is a cross-platform UI framework that allows you to build applications for WebAssembly, iOS, Android, macOS, Linux, and Windows using a single codebase with C# and XAML. It follows the MVVM (Model-View-ViewModel) pattern and implements WinUI 3 APIs with UWP compatibility.
 
 ## Working with Views and ViewModels
 
@@ -61,10 +61,10 @@ When you ask me to create a new View or ViewModel, I will:
 
 ## Best Practices
 
-1. **Use WinUI/UWP APIs**: Uno Platform implements WinUI and UWP APIs, so refer to Microsoft's documentation
+1. **Use WinUI 3 APIs**: Uno Platform primarily implements WinUI 3 APIs with UWP compatibility, so refer to Microsoft's WinUI documentation
 2. **Test on Multiple Platforms**: Code should work across WebAssembly, iOS, Android, and desktop platforms
 3. **Follow MVVM Pattern**: Keep business logic in ViewModels, UI in Views
-4. **Leverage Uno Extensions**: Consider using Uno.Extensions for MVVM, Navigation, and Dependency Injection
+4. **Leverage Uno Extensions**: Consider using Uno.Extensions for MVVM, Navigation, Dependency Injection, Configuration, and Reactive programming
 5. **Cross-Platform Compatibility**: Test platform-specific code thoroughly
 
 ## Uno Platform Renderers
