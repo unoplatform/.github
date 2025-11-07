@@ -49,7 +49,7 @@ When you ask me to create a new View or ViewModel, I will:
 - Handling async operations
 
 **Platform-Specific Code:**
-- Using `#if __ANDROID__`, `#if __IOS__`, `#if __WASM__` conditional compilation
+- Using `#if __ANDROID__`, `#if __IOS__`, `#if __WASM__`, `#if __WINDOWS__`, `#if __MACOS__`, `#if __LINUX__` conditional compilation
 - Implementing platform-specific features
 - Handling platform differences
 
@@ -61,7 +61,7 @@ When you ask me to create a new View or ViewModel, I will:
 
 ## Best Practices
 
-1. **Use WinUI 3 APIs**: Uno Platform primarily implements WinUI 3 APIs with UWP compatibility. Note that API availability may vary by target platform, so refer to Microsoft's WinUI documentation and Uno Platform docs for platform-specific details
+1. **Use WinUI 3 APIs**: Uno Platform primarily implements WinUI 3 APIs with UWP compatibility. API availability may vary by target platform, so refer to Microsoft's WinUI documentation and Uno Platform docs for platform-specific details
 2. **Test on Multiple Platforms**: Code should work across WebAssembly, iOS, Android, and desktop platforms
 3. **Follow MVVM Pattern**: Keep business logic in ViewModels, UI in Views
 4. **Leverage Uno Extensions**: Consider using Uno.Extensions for MVVM, Navigation, Dependency Injection, Configuration, and Reactive programming
@@ -70,8 +70,8 @@ When you ask me to create a new View or ViewModel, I will:
 ## Uno Platform Renderers
 
 Uno Platform supports two rendering approaches:
-- **Native Renderer**: Uses native platform controls (default). Best for platform-consistent UI and maximum performance on each platform
-- **Skia Renderer**: Uses SkiaSharp for pixel-perfect cross-platform rendering. Best for custom graphics, complex animations, and when you need identical rendering across all platforms
+- **Native Renderer**: Uses native platform controls (default). Choose this for platform-consistent UI, maximum performance, and seamless integration with native platform features. Ideal for standard business applications and forms
+- **Skia Renderer**: Uses SkiaSharp for pixel-perfect cross-platform rendering. Choose this for custom graphics, complex animations, games, or when you need identical rendering across all platforms. May have higher memory usage but provides complete rendering control
 
 When providing solutions, I'll consider which renderer you're using if it affects the implementation.
 
